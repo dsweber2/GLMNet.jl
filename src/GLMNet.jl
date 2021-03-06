@@ -6,7 +6,7 @@ using Distributed, Printf, Random, SparseArrays
 using DataFrames
 
 import Base.getindex, Base.convert, Base.size, Base.show
-export glmnet!, glmnet, nactive, predict, glmnetcv, GLMNetPath, GLMNetCrossValidation, CompressedPredictorMatrix
+export glmnet!, glmnet, nactive, predict, glmnetcv, GLMNetPath, GLMNetCrossValidation, CompressedPredictorMatrix, chooseBestLambda
 
 struct CompressedPredictorMatrix <: AbstractMatrix{Float64}
     ni::Int               # Number of predictors
